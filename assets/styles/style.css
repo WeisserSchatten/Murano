@@ -1,0 +1,212 @@
+* {
+	box-sizing: border-box;
+}
+body, 
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+ul {
+	margin: 0;
+	font-family: "Trebuchet MS";
+	color: #565656;
+}
+
+.purchase-main-title {
+	padding: 0 0 55px 14px;
+	font-size: 37px;
+	font-weight: bolder;
+}
+
+.purchase-title {
+	font-size: 10px;
+	padding-top: 16px;
+	padding-bottom: 26px;
+}
+
+.model h3.purchase-title {
+	padding-bottom: 10px;
+}
+
+.final-purchase {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	min-height: 100vh;
+}
+.model,
+.options,
+.amount,
+.total{
+	float: left;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.model,
+.options,
+.amount,
+.time {
+	background-color: #f4f0ef;
+	padding: 0 14px 0 14px;
+	margin-right: 8px;
+	border-radius: 5px;
+	border: 1px solid #eeeae9;
+}
+
+.time {
+	margin: 0;
+}
+
+.options {
+	width: 150px;
+	height: 434px;
+}
+
+.model-element {
+	position: relative;
+	width: 176px;
+	display: flex;
+	height: 54px;
+	align-items: center;
+}
+.model-element:last-child{
+	margin-bottom: 18px;
+}
+
+.model-element-image-first {
+	height: 28px;
+	margin-right: 20px;
+}
+
+.model-element-image-second {
+	height: 26px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.model-element-text {
+	color: #cacac9;
+	font-size: 11px;
+}
+
+.options-element-text {
+	color: #7f8180;
+	font-size: 11px;
+	line-height: 24px; 
+	margin-left: 12px;
+}
+
+.options-element {
+	width: 118px;
+	background-color: #f7f7f7;	
+	border-radius: 5px;
+	border: 1px solid #eae8e9;
+}
+
+.options-element-img {
+	position: absolute;
+	display: block;
+	height: 11px;
+	top: 9px;
+	right: 8px;
+}
+
+.general-options:before {
+	position: absolute;
+	content: "";
+    clear: both;
+	top: 5px;
+	right: 25px;
+	width: 1px;
+	height: 18px;
+	background-color: #c8cac9;
+}
+
+
+.general-options {
+	position: relative;
+	height: 49px;
+	margin-bottom: 3px; 
+}
+
+.missing-options-element {
+	margin-bottom: 14px
+}
+
+.missing-options-element-text {
+	line-height: 36px;
+}
+.sofa-options-second.-visible,
+.mattress-options-second.-visible,
+.chair-options-second.-visible,
+.carpet-options-second.-visible,
+.model-sofa-hover.-visible,
+.model-bean-hover.-visible,
+.model-carpet-hover.-visible,
+.model-chair-hover.-visible,
+.model-mattress-hover.-visible,
+.model-armchair-hover.-visible,
+.model-couch-hover.-visible,
+.options-sofa-img-hover.-visible,
+.options-carpet-img-hover.-visible,
+.options-mattress-img-hover.-visible,
+.options-bean-img-hover.-visible,
+.options-chair-img-hover.-visible {
+	display: inline-block;
+}
+.carpet-options-second,
+.sofa-options-second,
+.mattress-options-second,
+.chair-options-second,
+.model-couch-hover,
+.model-armchair-hover,
+.model-mattress-hover,
+.model-chair-hover,
+.model-carpet-hover,
+.model-bean-hover,
+.model-sofa-hover,
+.options-sofa-img-hover,
+.options-carpet-img-hover,
+.options-mattress-img-hover,
+.options-bean-img-hover,
+.options-chair-img-hover {
+	display: none;
+}
+
+.options-sofa-img.-invisible,
+.options-mattress-img.-invisible,
+.options-chair-img.-invisible,
+.options-carpet-img.-invisible,
+.sofa-options-first.-invisible,
+.mattress-options-first.-invisible,
+.chair-options-first.-invisible,
+.carpet-options-first.-invisible,
+.model-sofa.-invisible,
+.model-bean.-invisible,
+.model-carpet.-invisible,
+.model-chair.-invisible,
+.model-mattress.-invisible,
+.model-armchair.-invisible,
+.model-couch.-invisible {
+	display: none;
+	opacity: 0;
+}
+
+.couch-text.-hover-text,
+.armchair-text.-hover-text,
+.mattress-text.-hover-text,
+.chair-text.-hover-text,
+.carpet-text.-hover-text,
+.bean-text.-hover-text,
+.sofa-text.-hover-text {
+	color: #565656;
+}
