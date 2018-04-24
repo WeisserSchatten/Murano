@@ -35,6 +35,10 @@ $(document).ready(function () {
 		$('.sofa-text').toggleClass('-hover-text');
 	});
 
+
+
+
+
 	$('.options-sofa-img').click(function() {
 		$('.options-sofa-img').addClass('-invisible');
 		$('.sofa-options-second').addClass('-visible');
@@ -55,4 +59,58 @@ $(document).ready(function () {
 		$('.chair-options-second').addClass('-visible');
 		$('.options-chair-img-hover').addClass('-visible');
 	});
+
+
+
+	function FirstParameterSofa() {
+		$('.options-sofa-img').removeClass('-invisible');
+		$('.sofa-options-second').removeClass('-visible');
+		$('.options-sofa-img-hover').removeClass('-visible');
+	};
+	function SecondParameterSofa() {
+		$('.options-sofa-img').removeClass('-invisible');
+		$('.sofa-options-first').removeClass('-visible');
+		$('.options-sofa-img-hover').removeClass('-visible');
+	};
+
+	function FirstParameterChair() {
+		$('.options-chair-img').removeClass('-invisible');
+		$('.chair-options-second').removeClass('-visible');
+		$('.options-chair-img-hover').removeClass('-visible');
+	};
+	function SecondParameterChair() {
+		$('.options-chair-img').removeClass('-invisible');
+		$('.chair-options-first').removeClass('-visible');
+		$('.options-chair-img-hover').removeClass('-visible');
+	}
+
+	function FirstParameterCarpet() {
+		$('.options-carpet-img').removeClass('-invisible');
+		$('.carpet-options-second').removeClass('-visible');
+		$('.options-carpet-img-hover').removeClass('-visible');
+	}
+	function SecondParameterCarpet() {
+		$('.options-carpet-img').removeClass('-invisible');
+		$('.carpet-options-first').removeClass('-visible');
+		$('.options-carpet-img-hover').removeClass('-visible');
+	}
+
+	function FirstParameterMattress () {
+		$('.options-mattress-img').removeClass('-invisible')
+		$('.mattress-options-second').removeClass('-visible')
+		$('.options-mattress-img-hover').removeClass('-visible');
+	}
+	function SecondParameterMattress () {
+		$('.options-mattress-img').removeClass('-invisible');
+		$('.mattress-options-first').removeClass('-visible');
+		$('.options-mattress-img-hover').removeClass('-visible');
+	}
+
+
+
+	$('.options-mattress-img-hover').click(FirstParameterMattress)
+	$('.mattress-options-first').click(FirstParameterMattress())
+	$('.mattress-options-second').click( SecondParameterMattress() );
+
+
 });
