@@ -98,44 +98,22 @@ ul {
 	font-size: 11px;
 }
 
-.options-element-text {
-	color: #7f8180;
-	font-size: 11px;
-	line-height: 24px; 
-	margin-left: 12px;
+option,
+select,
+input,
+textarea {
+	outline: none;
 }
 
 .options-element {
+	margin-bottom: 24px;
+	height: 31px; 
 	width: 118px;
 	background-color: #f7f7f7;	
-	border-radius: 5px;
+	color: #7f8180;
+	font-size: 11px;
 	border: 1px solid #eae8e9;
-}
-
-.options-element-img {
-	position: absolute;
-	display: block;
-	height: 11px;
-	top: 9px;
-	right: 8px;
-}
-
-.general-options:before {
-	position: absolute;
-	content: "";
-    clear: both;
-	top: 5px;
-	right: 25px;
-	width: 1px;
-	height: 18px;
-	background-color: #c8cac9;
-}
-
-
-.general-options {
-	position: relative;
-	height: 49px;
-	margin-bottom: 3px; 
+	border-radius: 5px;
 }
 
 .missing-options-element {
@@ -145,51 +123,100 @@ ul {
 .missing-options-element-text {
 	line-height: 36px;
 }
-.sofa-options-second.-visible,
-.mattress-options-second.-visible,
-.chair-options-second.-visible,
-.carpet-options-second.-visible,
+
+.js-input-quantity {
+	font-size: 13px;
+	width: 15px;
+	height: 26px;
+	background-color: #f7f7f7;
+	border: none;
+}
+
+.js-minus {
+	margin-left: 8px;
+	height: 11px;
+}
+
+.js-plus {
+	height: 11px;
+	margin-right: 8px;
+}
+
+.number {
+	display: flex;
+	justify-content: space-between;
+	width: 66px;
+	margin-bottom: 26px;
+	align-items: center;
+	border-radius: 5px;
+	border: 1px solid #eae8e9;
+	background-color: #f7f7f7;
+}
+
+.time-element {
+	width: 332px;
+}
+
+.data-user {
+	display: flex;
+	align-items: center;
+	margin: 0 0 13px 8px;
+	width: 168px;
+	padding: 7px;
+	border-radius: 5px;
+	border: 2px solid #eae8e9;
+	background-color: #f7f7f7;
+}
+
+.data-user input {
+	background-color: #f7f7f7;
+	border: none;
+	width: 135px;
+	margin-left: 8px;
+}
+.address {
+	align-items: stretch;
+}
+
+.address textarea {
+	font-family: Trebuchet MS;
+	background-color: #f7f7f7;
+	border: none;
+	width: 135px;
+	margin-left: 8px;
+	height: 70px;
+}
+
+.data-user img {
+	height: 15px;
+}
+
+#date8,
+.data-user,
+.clock {
+	float: left;
+}
+
 .model-sofa-hover.-visible,
 .model-bean-hover.-visible,
 .model-carpet-hover.-visible,
 .model-chair-hover.-visible,
 .model-mattress-hover.-visible,
 .model-armchair-hover.-visible,
-.model-couch-hover.-visible,
-.options-sofa-img-hover.-visible,
-.options-carpet-img-hover.-visible,
-.options-mattress-img-hover.-visible,
-.options-bean-img-hover.-visible,
-.options-chair-img-hover.-visible {
+.model-couch-hover.-visible {
 	display: inline-block;
 }
-.carpet-options-second,
-.sofa-options-second,
-.mattress-options-second,
-.chair-options-second,
+
 .model-couch-hover,
 .model-armchair-hover,
 .model-mattress-hover,
 .model-chair-hover,
 .model-carpet-hover,
 .model-bean-hover,
-.model-sofa-hover,
-.options-sofa-img-hover,
-.options-carpet-img-hover,
-.options-mattress-img-hover,
-.options-bean-img-hover,
-.options-chair-img-hover {
+.model-sofa-hover{
 	display: none;
 }
 
-.options-sofa-img.-invisible,
-.options-mattress-img.-invisible,
-.options-chair-img.-invisible,
-.options-carpet-img.-invisible,
-.sofa-options-first.-invisible,
-.mattress-options-first.-invisible,
-.chair-options-first.-invisible,
-.carpet-options-first.-invisible,
 .model-sofa.-invisible,
 .model-bean.-invisible,
 .model-carpet.-invisible,
@@ -198,7 +225,6 @@ ul {
 .model-armchair.-invisible,
 .model-couch.-invisible {
 	display: none;
-	opacity: 0;
 }
 
 .couch-text.-hover-text,

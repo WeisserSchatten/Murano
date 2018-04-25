@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/calendar.css">
 	<title>Murano</title>
 </head>
 <body>
@@ -63,49 +64,35 @@
 			</div>
 			<div class="options">
 				<h3 class="purchase-title">Параметры</h3>
-				<div class="sofa-options general-options">
-					<img src="assets/images/arrow-down.png" class="options-element-img options-sofa-img">
-					<img src="assets/images/arrow-up.png" class="options-element-img options-sofa-img-hover">
-					<div class="options-element sofa-options-first">
-						<span class="options-element-text">2-местный</span>
-					</div>
-					<div class="options-element sofa-options-second">
-						<span class="options-element-text">3-местный</span>
-					</div>
+				<div class="sofa-options">
+					<select class="options-element">> 
+						<option>2-местный</option> 
+						<option>3-местный</option> 
+						<option>4-местный</option> 
+					</select> 
 				</div>
+
 				<div class="missing-options-element">
 					<span class="missing-options-element-text">-</span>
 				</div>
-				<div class="mattress-options general-options">
-					<img src="assets/images/arrow-down.png" class="options-element-img options-mattress-img">
-					<img src="assets/images/arrow-up.png" class="options-element-img options-mattress-img-hover">
-					<div class="options-element mattress-options-first">
-						<span class="options-element-text">Односпальный</span>
-					</div>
-					<div class="options-element mattress-options-second">
-						<span class="options-element-text">Двуспальный</span>
-					</div>
-				</div>
-				<div class="chair-options general-options">
-					<img src="assets/images/arrow-down.png" class="options-element-img options-chair-img">
-					<img src="assets/images/arrow-up.png" class="options-element-img options-chair-img-hover">
-					<div class="options-element chair-options-first">
-						<span class="options-element-text">Со спинкой</span>
-					</div>
-					<div class="options-element chair-options-second">
-						<span class="options-element-text">Без спинки</span>
-					</div>
-				</div>
-				<div class="carpet-options general-options">
-					<img src="assets/images/arrow-down.png" class="options-element-img options-carpet-img">
-					<img src="assets/images/arrow-up.png" class="options-element-img options-carpet-img-hover">
-					<div class="options-element carpet-options-first">
-						<span class="options-element-text">Короткий ворс</span>
-					</div>
-					<div class="options-element carpet-options-second">
-						<span class="options-element-text">Длинный ворс</span>
-					</div>
-				</div>
+				<div class="matrass-options"> 
+					<select class="options-element">> 
+						<option>Односпальный</option> 
+						<option>Двуспальный</option> 
+					</select> 
+				</div> 
+				<div class="chair-options"> 
+					<select class="options-element">> 
+						<option>Со спинкой</option> 
+						<option>Без спинкой</option> 
+					</select> 
+				</div> 
+				<div class="carpet-options"> 
+					<select class="options-element">> 
+						<option>Короткий ворс</option> 
+						<option>Длинный ворс</option> 
+					</select> 
+				</div> 
 				<div class="missing-options-element">
 					<span class="missing-options-element-text">-</span>
 				</div>
@@ -115,10 +102,65 @@
 			</div>
 			<div class="amount">
 				<h3 class="purchase-title">Количество</h3>
+				<div class="number"> 
+					<img class="js-minus" src="assets/images/left-arrow.png"> 
+					<input type="text" value="1" class="js-input-quantity amount-sofa"> 
+					<img class="js-plus" src="assets/images/right-arrow.png">
+				</div> 
+				<div class="number"> 
+					<img class="js-minus" src="assets/images/left-arrow.png"> 
+					<input type="text" value="1" class="js-input-quantity amount-armchair"> 
+					<img class="js-plus" src="assets/images/right-arrow.png"> 
+				</div> 
+				<div class="number"> 
+					<img class="js-minus" src="assets/images/left-arrow.png"> 
+					<input type="text" value="1" class="js-input-quantity amount-mattress"> 
+					<img class="js-plus" src="assets/images/right-arrow.png"> 
+				</div> 
+				<div class="number"> 
+					<img class="js-minus" src="assets/images/left-arrow.png"> 
+					<input type="text" value="1" class="js-input-quantity amount-chair"> 
+					<img class="js-plus" src="assets/images/right-arrow.png"> 
+				</div> 
+				<div class="number"> 
+					<img class="js-minus" src="assets/images/left-arrow.png"> 
+					<input type="text" value="1" class="js-input-quantity amount-carpet"> 
+					<img class="js-plus" src="assets/images/right-arrow.png"> 
+				</div> 
+				<div class="number"> 
+					<img class="js-minus" src="assets/images/left-arrow.png"> 
+					<input type="text" value="1" class="js-input-quantity amount-carpet"> 
+					<img class="js-plus" src="assets/images/right-arrow.png"> 
+				</div> 
+				<div class="number"> 
+					<img class="js-minus" src="assets/images/left-arrow.png"> 
+					<input type="text" value="1" class="js-input-quantity"> 
+					<img class="js-plus" src="assets/images/right-arrow.png"> 
+				</div>
 			</div>
 			<div class="total">
 				<div class="time">
 					<h3 class="purchase-title">Дата и время уборки</h3>
+					<div class="time-element clearfix">
+						<div id="date8"></div>
+						<div  class="data-user address">
+							<img src="assets/images/placeholder.png">
+							<textarea  placeholder="Введите Ваш адрес"></textarea>
+						</div>
+						<div class="data-user">
+							<img src="assets/images/phone.png">
+							<input type="text" placeholder="Введите телефон">
+						</div>
+						<div class="clock"> 
+							<img class="js-minus" src="assets/images/arrow-up.png"> 
+							<input type="text" value="1" class="js-input-quantity"> 
+							<img class="js-plus" src="assets/images/arrow-down.png"> 
+						</div> 
+						<div class="data-user">
+							<img src="assets/images/mail.png">
+							<input type="text" placeholder="Введите E-mail">
+						</div>
+					</div>
 				</div>
 				<div class="price"></div>
 			</div>
@@ -128,6 +170,7 @@
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="assets/scripts/calendar.js"></script>
 	<script type="text/javascript" src="assets/scripts/script.js"></script>
 </body>
 </html>
