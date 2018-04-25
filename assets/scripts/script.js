@@ -70,10 +70,20 @@ $(document).ready(function () {
 	let priceCouch = 350;
 	let priceCarpet = 150;
 	let priceArmchair = 250;
+	let amauntBean = $('.amount-bean').val();
+	let amauntSofa = $('.amount-sofa').val();
+	let amauntMattress = $('.amount-mattress').val();
+	let amauntChair = $('.amount-chair').val();
+	let amauntCouch = $('.amount-couch').val();
+	let amauntCarpet = $('.amount-carpet').val();
+	let amauntArmchair = $('.amount-armchair').val();
+	let priceEnd = 1//= $('.js-price-end')
 
 	$('.model-couch-mark').click(function() {
-		
-	});
+		priceEnd =  priceCouch * amauntCouch
+		alert(priceEnd)
+	})
+
 	$('.model-armchair-mark').click(function() {
 		
 	});
