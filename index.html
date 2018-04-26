@@ -152,9 +152,9 @@
 							<input type="text" placeholder="Введите телефон">
 						</div>
 						<div class="clock"> 
-							<img class="js-minus" src="assets/images/arrow-up.png"> 
-							<input type="text" value="1" class="js-input-quantity"> 
-							<img class="js-plus" src="assets/images/arrow-down.png"> 
+							<input type="text" placeholder="12" class="clock-element">
+							<span>:</span>
+							<input type="text" placeholder="00" class="clock-element">
 						</div> 
 						<div class="data-user">
 							<img src="assets/images/mail.png">
@@ -163,7 +163,17 @@
 					</div>
 				</div>
 				<div class="price">
-					<span class="js-price-end"></span>
+					<div class="cost price-element">
+						<img src="assets/images/shopping-cart.png" class="price-img">
+						<span class="price-text">стоимость -</span>
+						<span class="js-price-end price-text-second"></span>
+					</div>
+					<div class="discount price-element">
+						<img src="assets/images/percent.png" class="price-img">
+						<span class="price-text">Вaша скидка -</span>
+						<span  class="price-text-second">15%</span>
+					</div>
+					<button class="price-btn">Заказать</button>
 				</div>
 			</div>
 		</div>

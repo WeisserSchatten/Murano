@@ -101,8 +101,29 @@ ul {
 option,
 select,
 input,
-textarea {
+textarea,
+button {
 	outline: none;
+}
+
+.clock {
+	display: flex;
+	background-color: #f7f7f7;
+
+	align-items: center;
+	height: 30px;
+	margin-right: 30px;
+	margin-left: 30px;
+	border: 1px solid #eae8e9;
+	border-radius: 5px;
+}
+
+.clock-element {
+	background-color: #f7f7f7;
+	border: none;
+	font-size: 16px;
+	width: 20px;
+	height: 20px;
 }
 
 .options-element {
@@ -189,6 +210,57 @@ textarea {
 
 .data-user img {
 	height: 15px;
+}
+
+.price {
+	background-color: #18a765;
+	height: 175px;
+	width: 360px;
+	margin-top: 7px;
+	border-radius: 5px;
+	border: 1px solid #1a9a5d;
+}
+
+.price-element {
+	display: flex;
+	align-items: center;
+	color: white;
+	height: 51px;
+	margin-left: 33px;
+	width: 280px;
+}
+
+.price-img {
+	margin: 0 19px;
+}
+
+.price-btn {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 600;
+	color: #282723;
+	background-color: white;
+	border-radius: 5px;
+	height: 40px;
+	margin: 5px 0 0 46px;
+	width: 260px;
+}
+
+.price-text {
+	margin-top: 5px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.price-text-second {
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.cost {
+	border-bottom: 1px dotted white;
+	margin-top: 18px;
 }
 
 #date8,
