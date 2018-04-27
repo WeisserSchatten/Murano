@@ -70,36 +70,72 @@ $(document).ready(function () {
 	let priceCouch = 350;
 	let priceCarpet = 150;
 	let priceArmchair = 250;
-	let amauntBean = $('.amount-bean').val();
-	let amauntSofa = $('.amount-sofa').val();
-	let amauntMattress = $('.amount-mattress').val();
-	let amauntChair = $('.amount-chair').val();
-	let amauntCouch = $('.amount-couch').val();
-	let amauntCarpet = $('.amount-carpet').val();
-	let amauntArmchair = $('.amount-armchair').val();
-	let priceEnd = 1//= $('.js-price-end')
+	let	priceEndCouch = 0,
+		priceEndArmchair  = 0,
+		priceEndMattress = 0,
+		priceEndChair = 0,
+		priceEndCarpet = 0,
+		priceEndBean = 0,
+		priceEndSofa = 0
 
 	$('.model-couch-mark').click(function() {
-		priceEnd =  priceCouch * amauntCouch
-		alert(priceEnd)
+		priceEndCouch = priceCouch * $('.amount-couch').val();
+		endPrice();
+		return priceEndCouch;
 	})
 
 	$('.model-armchair-mark').click(function() {
-		
+		priceEndArmchair = priceArmchair * $('.amount-armchair').val();
+		endPrice();
+		return priceEndArmchair;
 	});
 	$('.model-mattress-mark').click(function() {
-		
+		priceEndMattress = priceMattress * $('.amount-mattress').val();
+		endPrice();
+		return priceEndMattress;
 	});
+
+
 	$('.model-chair-mark').click(function() {
-		
+		priceEndChair = priceChair * $('.amount-chair').val();
+		endPrice();
+		return priceEndChair;
 	});
 	$('.model-carpet-mark').click(function() {
-		
+		priceEndCarpet = priceCarpet * $('.amount-carpet').val();
+		endPrice();
+		return priceEndCarpet;
 	});
 	$('.model-bean-mark').click(function() {
-		
+		priceEndBean = priceBean * $('.amount-bean').val();
+		endPrice();
+		return priceEndBean;
 	});
 	$('.model-sofa-mark').click(function() {
-		
+		priceEndSofa = priceSofa * $('.amount-sofa').val();
+		endPrice();
+		return priceEndSofa;
 	});
+	
+	let priceEnd = 0;
+
+	endPrice();
+
+	function endPrice() {
+		priceEnd = priceEndCarpet + priceEndArmchair + priceEndSofa + priceEndMattress + priceEndBean + priceEndChair + priceEndCouch;
+		$('.js-price-end').text(priceEnd + 'тнг.');
+		if (priceEnd < 500) {
+			$('.js-discount').text('5%');
+		}; 
+		if (priceEnd > 500) {
+			$('.js-discount').text('15%');
+		};
+		if (priceEnd > 1000) {
+			$('.js-discount').text('20%');
+		};
+		if (priceEnd > 2000) {
+			$('.js-discount').text('25%');
+		};
+	};
+
 });
