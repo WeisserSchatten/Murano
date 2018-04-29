@@ -78,6 +78,9 @@ $(document).ready(function () {
 		priceEndBean = 0,
 		priceEndSofa = 0
 
+	let priceEnd = 0;
+
+	endPrice();
 	$('.model-couch-mark').click(function() {
 		priceEndCouch = priceCouch * $('.amount-couch').val();
 		endPrice();
@@ -94,7 +97,6 @@ $(document).ready(function () {
 		endPrice();
 		return priceEndMattress;
 	});
-
 
 	$('.model-chair-mark').click(function() {
 		priceEndChair = priceChair * $('.amount-chair').val();
@@ -116,10 +118,45 @@ $(document).ready(function () {
 		endPrice();
 		return priceEndSofa;
 	});
-	
-	let priceEnd = 0;
 
-	endPrice();
+	$('.js-amount-couch').click(function() {
+		priceEndCouch = priceCouch * $('.amount-couch').val();
+		endPrice();
+		return priceEndCouch;
+	})
+
+	$('.js-amount-armchair').click(function() {
+		priceEndArmchair = priceArmchair * $('.amount-armchair').val();
+		endPrice();
+		return priceEndArmchair;
+	});
+	$('.js-amount-mattress').click(function() {
+		priceEndMattress = priceMattress * $('.amount-mattress').val();
+		endPrice();
+		return priceEndMattress;
+	});
+
+	$('.js-amount-chair').click(function() {
+		priceEndChair = priceChair * $('.amount-chair').val();
+		endPrice();
+		return priceEndChair;
+	});
+	$('.js-amount-carpet').click(function() {
+		priceEndCarpet = priceCarpet * $('.amount-carpet').val();
+		endPrice();
+		return priceEndCarpet;
+	});
+	$('.js-amount-bean').click(function() {
+		priceEndBean = priceBean * $('.amount-bean').val();
+		endPrice();
+		return priceEndBean;
+	});
+	$('.js-amount-sofa').click(function() {
+		priceEndSofa = priceSofa * $('.amount-sofa').val();
+		endPrice();
+		return priceEndSofa;
+	});
+	
 
 	$('.model-couch-hover').click(function() {
 		priceEndCouch = 0;
@@ -163,6 +200,8 @@ $(document).ready(function () {
 		return priceEndCarpet
 	});
 
+
+
 	function endPrice() {
 		priceEnd = priceEndCarpet + priceEndArmchair + priceEndSofa + priceEndMattress + priceEndBean + priceEndChair + priceEndCouch;
 		$('.js-price-end').text(priceEnd + 'тнг.');
@@ -180,4 +219,10 @@ $(document).ready(function () {
 		};
 	};
 
+
 });
+
+
+jQuery(function($){
+   $("#phone").mask("8(999) 999-9999");
+   });
