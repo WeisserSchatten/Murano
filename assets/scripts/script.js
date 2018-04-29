@@ -121,6 +121,48 @@ $(document).ready(function () {
 
 	endPrice();
 
+	$('.model-couch-hover').click(function() {
+		priceEndCouch = 0;
+		endPrice()
+		return priceEndCouch
+	});
+
+	$('.model-armchair-hover').click(function() {
+		priceEndArmchair = 0;
+		endPrice()
+		return priceEndArmchair
+	});
+
+	$('.model-sofa-hover').click(function() {
+		priceEndSofa = 0;
+		endPrice()
+		return priceEndSofa
+	});
+
+	$('.model-mattress-hover').click(function() {
+		priceEndMattress = 0;
+		endPrice()
+		return priceEndMattress
+	});
+
+	$('.model-Bean-hover').click(function() {
+		priceEndBean = 0;
+		endPrice()
+		return priceEndBean
+	});
+
+	$('.model-chair-hover').click(function() {
+		priceEndChair = 0;
+		endPrice()
+		return priceEndChair
+	});
+
+	$('.model-carpet-hover').click(function() {
+		priceEndCarpet = 0;
+		endPrice()
+		return priceEndCarpet
+	});
+
 	function endPrice() {
 		priceEnd = priceEndCarpet + priceEndArmchair + priceEndSofa + priceEndMattress + priceEndBean + priceEndChair + priceEndCouch;
 		$('.js-price-end').text(priceEnd + 'тнг.');
